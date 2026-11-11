@@ -1,0 +1,30 @@
+version: "3.3"
+
+services:
+  gateway:
+    image: ghcr.io/LincolnAmorim042/portal-ti:latest
+    container_name: portal-ti
+    restart: always
+
+    ports:
+      - "8080:3000"
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./gateway/database/data:/app/gateway/database/data
+      - ./gateway/uploads:/app/gateway/uploads
+
+    networks:
+      - ti-network
+      - webproxy
+
+networks:
+  ti-network:
+    external:
+      name: ti-network-v2
+
+  webproxy:
+    external:
+      name: webproxy

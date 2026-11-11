@@ -1,0 +1,56 @@
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# runtime
+.env
+.env.local
+.env.*.local
+
+
+# =========================
+# Build / cache
+# =========================
+dist/
+build/
+coverage/
+.cache/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Docker (local overrides only)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# optional: secrets
+# =========================
+*.pem
+*.key
+*.crt
+
+# =========================
+# temp files
+# =========================
+tmp/
+temp/
+
+gateway/database/*.db
+!gateway/database/backups/
+!gateway/database/backups/latest.db
