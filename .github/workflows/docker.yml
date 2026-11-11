@@ -1,4 +1,4 @@
-name: Build and Push TI Gateway
+name: Build and Push Portal TI
 
 on:
   push:
@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/LincolnAmorim042/portal-ti:latest
+          tags: ghcr.io/lincolnamorim042/portal-ti:latest
